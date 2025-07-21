@@ -1,0 +1,31 @@
+/*
+🔹 ¿Por qué el guion bajo en _custom.scss?
+El guion bajo le dice a Sass que ese archivo es parcial (partial), o sea:
+    -No se compila por sí solo a CSS.
+    -Solo sirve para ser importado o usado desde otro archivo.
+Cuando se usa _custom.scss, Sass lo reconoce aunque escribas solo 'custom' (sin el _ ni .scss).
+*/
+//Custom
+$rojo: #F34F51;
+$verde: #0098AE;
+$oscuro: #212121;
+$gris: #B5B5B5;
+
+//Colores + Tipografia
+$primary: $rojo;
+$secondary: $verde;
+$dark: $oscuro;
+
+$display-font-weight: 900;
+$headings-font-weight: 700;
+
+//Cards
+$card-border-color: transparent;
+
+//NavLink
+$nav-link-padding-x: 0;
+$nav-link-color: $gris;
+$nav-link-hover-color: darken($gris, 10%); //Función SASS
+
+//Bootstrap Importación
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';

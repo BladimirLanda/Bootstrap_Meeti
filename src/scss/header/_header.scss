@@ -1,0 +1,25 @@
+/*
+as *
+Se está importando todo el contenido sin namespace, es decir, las variables, 
+mixins y funciones estarán disponibles directamente, sin tener que usar el 
+prefijo (custom.)
+*/
+@use '../custom' as *;
+
+.header {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include media-breakpoint-up (md) {
+        //media-breakpoint-up = min-width
+        //media-breakpoint-down = max-width
+        //(xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px)
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+}
+
+.logo {
+    width: 10rem;
+}
+

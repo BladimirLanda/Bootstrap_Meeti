@@ -1,0 +1,29 @@
+/*
+🔹 Diferencia entre @import y @use
+🧨 @import (más viejo):
+    -Importa el contenido como si lo copiaras y pegaras.
+    -Puede causar conflictos de variables, mixins y funciones.
+    -Se permite múltiples veces (lo cual puede duplicar código).
+    -Se usa aún porque Bootstrap lo requiere internamente.
+
+✅ @use (moderno, recomendado por Sass):
+    -Importa con namespacing (organización).
+    -Evita conflictos de nombres.
+    -Solo carga una vez cada archivo.
+    -Se puede acceder a variables con prefijo, por ejemplo: custom.$primary-color.
+*/
+
+/*
+PurgeCSS (npm i -g purgecss)
+https://purgecss.com/
+PurgeCSS es una herramienta que elimina el CSS no utilizado en tus archivos HTML, JS, Vue, etc. 
+Sirve para reducir el tamaño del archivo CSS final, haciendo que tu sitio cargue más rápido.
+
+🧠 ¿Cómo funciona?
+    -Analiza tus archivos (HTML, JS, TS, Vue, etc.).
+    -Detecta las clases que realmente usas.
+    -Elimina todo el CSS que no esté siendo usado.
+    -Te entrega un archivo CSS limpio y optimizado.
+*/
+@use 'header';
+@use 'contenido';

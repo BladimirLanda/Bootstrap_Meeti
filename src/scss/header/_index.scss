@@ -1,0 +1,8 @@
+/*
+@forward
+Se usa para exportar cosas desde un archivo Sass, como:
+    -Variables -Mixins -Funciones
+Reexporta cosas para otros archivos y así otros archivos 
+puedan usarlas con @use.
+*/
+@forward 'header';
